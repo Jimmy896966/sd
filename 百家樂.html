@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>現代化百家樂統計表</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+    
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2ecc71;
+      --background-color: #f0f0f0;
+      --card-background: #ffffff;
+      --text-color: #333333;
+      --highlight-color: #e74c3c;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .card {
+      background: var(--card-background);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 15px 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    
+    .card-body {
+      padding: 20px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+    
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    
+    tr:last-child td {
+      border-bottom: none;
+    }
+    
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+    
+    .progress-bar {
+      height: 8px;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+    
+    .progress {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      transition: width 0.5s ease-in-out;
+    }
+    
+    .highlight {
+      color: var(--highlight-color);
+      font-weight: bold;
+    }
+    
+    .note {
+      font-style: italic;
+      color: #7f8c8d;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9em;
+    }
+    
+    @media (max-width: 768px) {
+      .card-body {
+        padding: 15px;
+      }
+      
+      th, td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">主要投注選項統計</div>
+      <div class="card-body">
+        <table>
+          <tr>
+            <th>投注選項</th>
+            <th>精確機率</th>
+            <th>標準賠率</th>
+            <th>期望值</th>
+          </tr>
+          <tr>
+            <td>莊家 (Banker)</td>
+            <td>
+              45.8597%
+              <div class="progress-bar">
+                <div class="progress" style="width: 45.8597%"></div>
+              </div>
+            </td>
+            <td>0.95:1</td>
+            <td class="highlight">-1.06%</td>
+          </tr>
+          <tr>
+            <td>閒家 (Player)</td>
+            <td>
+              44.6249%
+              <div class="progress-bar">
+                <div class="progress" style="width: 44.6249%"></div>
+              </div>
+            </td>
+            <td>1:1</td>
+            <td class="highlight">-1.24%</td>
+          </tr>
+          <tr>
+            <td>和局 (Tie)</td>
+            <td>
+              9.5154%
+              <div class="progress-bar">
+                <div class="progress" style="width: 9.5154%"></div>
+              </div>
+            </td>
+            <td>8:1</td>
+            <td class="highlight">-14.36%</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">深入統計數據</div>
+      <div class="card-body">
+        <table>
+          <tr>
+            <th>描述</th>
+            <th>機率</th>
+          </tr>
+          <tr>
+            <td>莊家獲勝 (不含和局)</td>
+            <td>
+              50.68%
+              <div class="progress-bar">
+                <div class="progress" style="width: 50.68%"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>閒家獲勝 (不含和局)</td>
+            <td>
+              49.32%
+              <div class="progress-bar">
+                <div class="progress" style="width: 49.32%"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>莊家拿到自然牌 (8或9)</td>
+            <td>
+              ~5.1%
+              <div class="progress-bar">
+                <div class="progress" style="width: 5.1%"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>閒家拿到自然牌 (8或9)</td>
+            <td>
+              ~5.1%
+              <div class="progress-bar">
+                <div class="progress" style="width: 5.1%"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>雙方都拿到自然牌</td>
+            <td>
+              ~0.26%
+              <div class="progress-bar">
+                <div class="progress" style="width: 0.26%"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>閒家補第三張牌</td>
+            <td>
+              ~48.2%
+              <div class="progress-bar">
+                <div class="progress" style="width: 48.2%"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>莊家補第三張牌</td>
+            <td>
+              ~51.4%
+              <div class="progress-bar">
+                <div class="progress" style="width: 51.4%"></div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    
+    <p class="note">注：所有機率和期望值均基於標準8副牌百家樂規則計算。莊家獲勝的期望值假設抽取5%佣金。數據僅供參考，實際遊戲中的結果可能因短期波動而有所不同。</p>
+  </div>
+</body>
+</html>
